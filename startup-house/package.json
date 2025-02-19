@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
     "framer-motion": "^12.4.4",
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-scroll": "^1.9.2"
+    "react-scroll": "^1.9.2",
+    "sass": "^1.85.0"
   },
   "devDependencies": {
     "postcss": "^8",

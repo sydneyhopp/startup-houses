@@ -1,15 +1,22 @@
 "use client";
 
 import {useState, useEffect} from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const backgroundImages = [
     "/background/block.svg",
-    "/background/frontdoor.svg",
     "/background/firstfloor.svg"
 ]
 
 export default function StickyBackground() {
     const [currIndex, setCurrIndex] = useState(0);
+
+    useEffect(() => {
+        backgroundImages.forEach(src => {
+          const img = new Image();
+          img.src = src;
+        });
+      }, []);
 
     useEffect(() => {
         const scroll = () => {
@@ -35,7 +42,8 @@ export default function StickyBackground() {
         // SVG BACKGROUND
         <div
             style={{
-            position: 'sticky',
+            position: 'fixed',
+            zIndex: -1, // sits behind!!!
             top: 0,
             height: '100vh',
             width: '100%',
@@ -45,7 +53,25 @@ export default function StickyBackground() {
             transition: "background-image 0.5s ease-in-out",
             }}
         >
-            {/* You can add further animations or overlays here if desired */}
+            <AnimatePresence exitBeforeEnter>
+                <motion.div
+                key={currIndex}
+                initial={{ opacity: 0, y:50}}
+                animate={{ opacity: 1, y:0}}
+                exit={{ opacity: 0, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    height: "100%",
+                    width: "100%",
+                    backgroundImage: `url(${backgroundImages[currIndex]})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                }}
+                />
+            </AnimatePresence>
         </div>
     )
 }

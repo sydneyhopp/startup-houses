@@ -4,15 +4,26 @@ import React from 'react';
 import {useState, useEffect} from "react";
 import Image from "next/image";
 import StickyBackground from '@/components/StickyBackground';
+import ZoomParallax from '@/components/ZoomParallax';
 
 export default function Scrolly(){
     return (
-        <div>
-          {/* Render sticky background! */}
+        <main>
+          <div className="banner">
+            <h1>Code, Coffee, and Chaos</h1>
+            <h3>A project by Maya, Sofia, and Sydney :)</h3>
+          </div>
+          
+          <ZoomParallax/>
+          
           <StickyBackground />
-          <div style={{ height: "3000px" }}></div>
 
-        </div>
+          {/* Render sticky background! */}
+          {/* <StickyBackground /> */}
+          {/* added extra content just so it's scrollable lol */}
+          {/* <div style={{ height: "3000px" }}></div> */}
+
+        </main>
 
     )
 }
