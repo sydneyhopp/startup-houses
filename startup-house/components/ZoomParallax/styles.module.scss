@@ -1,6 +1,8 @@
 .container {
     height: 300vh;
     position: relative;
+    margin-top: 50vh;
+    margin-bottom: 100vh;
 
 
     .sticky{
@@ -8,12 +10,11 @@
         top: 0px;
         height: 100vh;
         background-color: #C3EEFA;
-        margin-top: 50vh;
-        margin-bottom: 100vh;
+        overflow: hidden;
     }
 
     .element{
-        width: 100vh;
+        width: 100vw;
         height: 100vh;
         position: absolute; 
         top: 0;
@@ -22,7 +23,7 @@
         justify-content: center;
 
         .imageContainer {
-            width: 40vh;
+            width: 25vw;
             height: 25vh;
             position: relative;
 
@@ -30,5 +31,53 @@
                 object-fit: cover;
             }
         }
+
+        &:nth-of-type(1){
+            .imageContainer{
+                top: -6vh;
+                left: -22vw;
+                width: 15vw;
+                height: 30vh
+            }
+        }
+
+        &:nth-of-type(2){
+            .imageContainer{
+                top: 30vh;
+                left: -20vw;
+                width: 25vw;
+                height: 30vh
+            }
+            
+        }
+
+        &:nth-of-type(3){
+            .imageContainer{
+                top: -30vh;
+                left: 5vw;
+                width: 20vw;
+                height: 30vh
+            }
+            
+        }
+        &:nth-of-type(4){
+            .imageContainer{
+                top: 5vh;
+                left: 25vw;
+                width: 15vw;
+                height: 40vh
+            }
+            
+        }
+        &:nth-of-type(5){
+            .imageContainer{
+                top: 30vh;
+                left: 5vw;
+                width: 15vw;
+                height: 30vh
+            }
+
+        }
+
     }
 }

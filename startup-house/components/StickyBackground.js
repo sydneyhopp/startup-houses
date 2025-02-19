@@ -4,8 +4,12 @@ import {useState, useEffect} from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const backgroundImages = [
-    "/background/block.svg",
-    "/background/firstfloor.svg"
+    "/background/frontdoor.svg",
+    "/background/firstfloor.svg",
+    "/background/secfloor.svg",
+    "/background/wholehouse.svg",
+    "/background/window.svg",
+    "/background/skyline.svg"
 ]
 
 export default function StickyBackground() {
@@ -56,8 +60,8 @@ export default function StickyBackground() {
             <AnimatePresence exitBeforeEnter>
                 <motion.div
                 key={currIndex}
-                initial={{ opacity: 0, y:50}}
-                animate={{ opacity: 1, y:0}}
+                initial={{ opacity: 0}}
+                animate={{ opacity: 1}}
                 exit={{ opacity: 0, scale: 1 }}
                 transition={{ duration: 0.5 }}
                 style={{
