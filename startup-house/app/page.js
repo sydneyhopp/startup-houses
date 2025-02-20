@@ -18,9 +18,9 @@ export default function Scrolly(){
             <ZoomParallax/>
           </section>
           
-          <section className="stickySection">
+          {/* <section className="stickySection">
             <StickyBackground/>
-          </section>
+          </section> */}
           
 
           {/* Render sticky background! */}

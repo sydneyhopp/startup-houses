@@ -40,7 +40,7 @@ export default function Index() {
         {src: blockPic,scale: scale4},
     ]
 
-    const textTranslate = useTransform(scrollYProgress, [0.5, 0.6], ['100vh', '20vh'])
+    const textTranslate = useTransform(scrollYProgress, [0.4, 0.5, 0.7, .8], ['100vh', '20vh', '20vh', '-30vh'])
 
 
     return (
