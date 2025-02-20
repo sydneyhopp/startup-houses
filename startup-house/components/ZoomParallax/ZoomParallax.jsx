@@ -14,6 +14,7 @@ import pic2 from '/public/houses/two.jpg';
 import pic3 from '/public/houses/three.jpg';
 import pic4 from '/public/houses/four.jpg';
 import pic5 from '/public/houses/five.jpg';
+import StickyTextBox from '../TextBox/TextBox';
 
 export default function Index() {
 
@@ -31,52 +32,44 @@ export default function Index() {
     const scale9 = useTransform(scrollYProgress, [0, .4, 1], [1, 9, 9])
 
     const pictures = [
-        {
-            src: pic1,
-            scale: scale5
-        },
-        {
-            src: pic2,
-            scale: scale6
-        },
-        {
-            src: pic3,
-            scale: scale7
-        },
-        {
-            src: pic4,
-            scale: scale8
-        },
-        {
-            src: pic5,
-            scale: scale9
-        },
-        {
-            src: blockPic,
-            scale: scale4
-        },
+        {src: pic1,scale: scale5},
+        {src: pic2,scale: scale6},
+        {src: pic3,scale: scale7},
+        {src: pic4,scale: scale8},
+        {src: pic5,scale: scale9},
+        {src: blockPic,scale: scale4},
     ]
+
+    const textTranslate = useTransform(scrollYProgress, [0.5, 0.6], ['100vh', '20vh'])
 
 
     return (
         <div ref={container} className={styles.container}>
             <div className={styles.sticky}>
-                {
-                    pictures.map(({src, scale}, index) =>{
-                        return <motion.div key = {index} style={{scale}} className={styles.element}>
-                                    <div  className={styles.imageContainer}>
-                                        <Image
-                                            src = {src}
-                                            fill
-                                            alt= "Illustration of the Painted Ladies in SF"
-                                            // placeholder='blur' {/* blurs the image  */}
-                                        />
-                                    </div>
-                                </motion.div>
+                {pictures.map(({src, scale}, index) =>{
+                    return <motion.div key = {index} style={{scale}} className={styles.element}>
+                                <div  className={styles.imageContainer}>
+                                    <Image
+                                        src = {src}
+                                        fill
+                                        alt= "Illustration of the Painted Ladies in SF"
+                                        //placeholder='blur' /* blurs the image  */
+                                    />
+                                </div>
+                            </motion.div>
+                })}
+                <StickyTextBox
+                    trans ={textTranslate}
+                    left = '10vh'
+                    height = '20vh'
+                    width = '40vw'
+                    back = 'white'
+                    border = 'black'
+                    text = "heeeeeyyyyyyyyy blah blah hey"
+                >
+                   
 
-                    })
-                }
-                
+                </StickyTextBox>
             </div>
         </div>
     )

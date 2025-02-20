@@ -9,3 +9,5 @@ Created a zoom parallax animation! Still need to tweak it.
 Made the zoom parallax animation cleaner! Had the idea to incorporate many illustrations of start up houses, and then zoom in on the one that we actually had the chance to visit.
 
 Right now, I'm trying to create sticky text boxes as well as blend the zoom animation with the scrolling background images. 
+
+Godbless figured out how to make a textbox component. I incorporated it into our first zoom parallax, but I intend to reuse this component on future images. Yay!
