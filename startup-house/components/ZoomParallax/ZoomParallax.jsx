@@ -1,4 +1,4 @@
-import styles from './styles.module.scss';
+import styles from './ZoomParallax.module.scss';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
@@ -23,12 +23,12 @@ export default function Index() {
         offset: ['start start', 'end end']
     })
 
-    const scale4 = useTransform(scrollYProgress, [0, 1], [1, 4])
-    const scale5 = useTransform(scrollYProgress, [0, 1], [1, 5])
-    const scale6 = useTransform(scrollYProgress, [0, 1], [1, 6])
-    const scale7 = useTransform(scrollYProgress, [0, 1], [1, 7])
-    const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8])
-    const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9])
+    const scale4 = useTransform(scrollYProgress, [0, .4, 1], [1, 4, 4])
+    const scale5 = useTransform(scrollYProgress, [0, .4, 1], [1, 5, 5])
+    const scale6 = useTransform(scrollYProgress, [0, .4, 1], [1, 6, 6])
+    const scale7 = useTransform(scrollYProgress, [0, .4, 1], [1, 7, 7])
+    const scale8 = useTransform(scrollYProgress, [0, .4, 1], [1, 8, 8])
+    const scale9 = useTransform(scrollYProgress, [0, .4, 1], [1, 9, 9])
 
     const pictures = [
         {
