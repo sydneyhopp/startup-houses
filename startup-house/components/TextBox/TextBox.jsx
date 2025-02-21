@@ -15,6 +15,7 @@ props:
 export default function StickyTextBox(props) {
     
     return (
+        
         // <div className="container">
             <motion.div
                 style={{

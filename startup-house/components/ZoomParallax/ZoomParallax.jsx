@@ -3,12 +3,6 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import blockPic from '/public/background/block.svg';
-import doorPic from '/public/background/frontdoor.svg';
-import firstPic from '/public/background/firstfloor.svg';
-import secPic from '/public/background/secfloor.svg';
-import housePic from '/public/background/wholehouse.svg';
-import windowPic from '/public/background/window.svg';
-import skyPic from '/public/background/skyline.svg';
 import pic1 from '/public/houses/one.jpg';
 import pic2 from '/public/houses/two.jpg';
 import pic3 from '/public/houses/three.jpg';
@@ -24,12 +18,12 @@ export default function Index() {
         offset: ['start start', 'end end']
     })
 
-    const scale4 = useTransform(scrollYProgress, [0, .4, 1], [1, 4, 4])
-    const scale5 = useTransform(scrollYProgress, [0, .4, 1], [1, 5, 5])
-    const scale6 = useTransform(scrollYProgress, [0, .4, 1], [1, 6, 6])
-    const scale7 = useTransform(scrollYProgress, [0, .4, 1], [1, 7, 7])
-    const scale8 = useTransform(scrollYProgress, [0, .4, 1], [1, 8, 8])
-    const scale9 = useTransform(scrollYProgress, [0, .4, 1], [1, 9, 9])
+    const scale4 = useTransform(scrollYProgress, [0, .3, 1], [1, 4, 4])
+    const scale5 = useTransform(scrollYProgress, [0, .3, 1], [1, 5, 5])
+    const scale6 = useTransform(scrollYProgress, [0, .3, 1], [1, 6, 6])
+    const scale7 = useTransform(scrollYProgress, [0, .3, 1], [1, 7, 7])
+    const scale8 = useTransform(scrollYProgress, [0, .3, 1], [1, 8, 8])
+    const scale9 = useTransform(scrollYProgress, [0, .3, 1], [1, 9, 9])
 
     const pictures = [
         {src: pic1,scale: scale5},
@@ -40,7 +34,9 @@ export default function Index() {
         {src: blockPic,scale: scale4},
     ]
 
-    const textTranslate = useTransform(scrollYProgress, [0.4, 0.5, 0.7, .8], ['100vh', '20vh', '20vh', '-30vh'])
+
+// maybe create a separate container for the text boxes...
+    const textTranslate = useTransform(scrollYProgress, [0.35, 0.5, 0.9, .91], ['100vh', '20vh', '20vh', '-30vh'])
 
 
     return (
@@ -66,10 +62,7 @@ export default function Index() {
                     back = 'white'
                     border = 'black'
                     text = "heeeeeyyyyyyyyy blah blah hey"
-                >
-                   
-
-                </StickyTextBox>
+                />
             </div>
         </div>
     )

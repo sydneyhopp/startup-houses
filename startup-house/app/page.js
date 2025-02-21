@@ -5,8 +5,22 @@ import {useState, useEffect} from "react";
 import Image from "next/image";
 import StickyBackground from '@/components/StickyBackground/StickyBackground';
 import ZoomParallax from '@/components/ZoomParallax/ZoomParallax';
+import ImageStick from '@/components/ImageStick/ImageStick';
+import doorPic from '/public/background/frontdoor.svg';
+import firstPic from '/public/background/firstfloor.svg';
+import secPic from '/public/background/secfloor.svg';
+import housePic from '/public/background/wholehouse.svg';
+import windowPic from '/public/background/window.svg';
+import skyPic from '/public/background/skyline.svg';
+
+
 
 export default function Scrolly(){
+
+  let firstBoxes = [
+    {left: '10vh', top: '20vh', height: '30vh', width: '20vh', content: "hey hey this is the first box", enter: '.1', stick: '.4', exit:'.5'},
+    {left: '10vh', top: '40vh', height: '20vh', width: '40vh', content: "second box yayy so sexy", enter: '.5',stick:' .85', exit:'.95'}
+  ]
     return (
         <main>
           <div className="banner">
@@ -17,6 +31,11 @@ export default function Scrolly(){
           <section className="parallaxSection">
             <ZoomParallax/>
           </section>
+          <ImageStick
+            src = {doorPic}
+            alt = "illustration of a front door"
+            boxes={firstBoxes}
+          />
           
           {/* <section className="stickySection">
             <StickyBackground/>
