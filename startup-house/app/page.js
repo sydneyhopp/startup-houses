@@ -6,6 +6,7 @@ import Image from "next/image";
 import StickyBackground from '@/components/StickyBackground/StickyBackground';
 import ZoomParallax from '@/components/ZoomParallax/ZoomParallax';
 import ImageStick from '@/components/ImageStick/ImageStick';
+import AnimateOnScroll from '@/components/AnimateScroll/AnimateScroll'
 import doorPic from '/public/background/frontdoor.svg';
 import firstPic from '/public/background/firstfloor.svg';
 import secPic from '/public/background/secfloor.svg';
@@ -31,36 +32,48 @@ export default function Scrolly(){
           <section className="parallaxSection">
             <ZoomParallax/>
           </section>
-          <ImageStick
-            src = {doorPic}
-            alt = "illustration of a front door"
-            boxes={firstBoxes}
-          />
+          <AnimateOnScroll reappear>
+            <ImageStick
+              src = {doorPic}
+              alt = "illustration of a front door"
+              boxes={firstBoxes}
+            />
+          </AnimateOnScroll>
+          <AnimateOnScroll reappear>
           <ImageStick
             src = {firstPic}
             alt = "illustration of a first door"
             boxes={firstBoxes}
           />
+          </AnimateOnScroll>
+          <AnimateOnScroll reappear>
           <ImageStick
             src = {secPic}
             alt = "illustration of a second door"
             boxes={firstBoxes}
           />
+          </AnimateOnScroll>
+          <AnimateOnScroll reappear>
           <ImageStick
             src = {housePic}
             alt = "illustration of whole house"
             boxes={firstBoxes}
           />
+          </AnimateOnScroll>
+          <AnimateOnScroll reappear>
           <ImageStick
             src = {windowPic}
             alt = "illustration of window"
             boxes={firstBoxes}
           />
+          </AnimateOnScroll>
+          <AnimateOnScroll reappear>
           <ImageStick
             src = {skyPic}
             alt = "illustration of sf skyline"
             boxes={firstBoxes}
           />
+          </AnimateOnScroll>
           
 
           
