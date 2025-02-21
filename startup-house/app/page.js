@@ -36,6 +36,33 @@ export default function Scrolly(){
             alt = "illustration of a front door"
             boxes={firstBoxes}
           />
+          <ImageStick
+            src = {firstPic}
+            alt = "illustration of a first door"
+            boxes={firstBoxes}
+          />
+          <ImageStick
+            src = {secPic}
+            alt = "illustration of a second door"
+            boxes={firstBoxes}
+          />
+          <ImageStick
+            src = {housePic}
+            alt = "illustration of whole house"
+            boxes={firstBoxes}
+          />
+          <ImageStick
+            src = {windowPic}
+            alt = "illustration of window"
+            boxes={firstBoxes}
+          />
+          <ImageStick
+            src = {skyPic}
+            alt = "illustration of sf skyline"
+            boxes={firstBoxes}
+          />
+          
+
           
           {/* <section className="stickySection">
             <StickyBackground/>
