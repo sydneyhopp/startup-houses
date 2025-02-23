@@ -15,28 +15,24 @@ props:
 export default function StickyTextBox(props) {
     
     return (
-        
-        // <div className="container">
+
+        <div className={styles.container}>
             <motion.div
                 style={{
+                    display: 'flex',
                     translateY: props.trans,
                     position: 'sticky',
-                    // top: props.top,
                     left: props.left,
-                    height: props.height,
-                    width: props.width,
-                    background: props.back,
-                    border: `3px solid ${props.border}`,
-                    borderRadius: '10px',
+                    width: 'auto',
+                    maxWidth: props.width,
                     zIndex: 1
                 }}
             >
-                <div className="text">
-                        <p>{props.text}</p>
-
+                <div className={styles.text}>
+                        {props.children}
                 </div>
 
             </motion.div>       
-        // </div>
+        </div>
     )
 };

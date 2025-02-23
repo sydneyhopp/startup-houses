@@ -2,22 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 body {
-  margin: 0px;
   background-color: #FFFDD0;
-  margin-top: 10vh;
-  margin-bottom: 100vh;
 }
 
 .banner {
-  padding: 5vh;
-  background-color: white;
+  height: 400vh;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bannerPic {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.textContainer {
+  position:absolute;
+  margin-top: 10vh;
   margin-left: 5vh;
   margin-right: 40vh; 
+  z-index: 2;
+}
+
+.bannerText {
+  padding: 5vh;
+  background-color: white;
+  border-radius: 1rem;
 }
 
 h1 {
   font-size: 50px;
-  
 }
 

@@ -11,3 +11,7 @@ Made the zoom parallax animation cleaner! Had the idea to incorporate many illus
 Right now, I'm trying to create sticky text boxes as well as blend the zoom animation with the scrolling background images. 
 
 Godbless figured out how to make a textbox component. I incorporated it into our first zoom parallax, but I intend to reuse this component on future images. Yay!
+
+Added revised illustrations to the website. Trying to fix up how I nested my styling of text elements cuz it's a little funky right now. Working on adjusting where each text box is located.
+
+I think I might need to refactor my code. Right now I'm doing a lot of hard coding for placement of text boxes, but perhaps there's an easier method.

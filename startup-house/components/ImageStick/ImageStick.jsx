@@ -24,7 +24,7 @@ export default function ImageStick(props) {
     // const textTranslate = useTransform(scrollYProgress, [0.4, 0.5, 0.9, .91], ['100vh', '20vh', '20vh', '-30vh'])
 
     props.boxes.forEach(box => {
-        box.transform = useTransform(scrollYProgress, [0, box.enter, box.stick, box.exit], ['100vh', box.top, box.top, '-50vh'])
+        box.transform = useTransform(scrollYProgress, [0, box.enter, box.stick, box.exit], ['100vh', box.top, box.top, '-60vh'])
     })
    
 
@@ -32,20 +32,20 @@ export default function ImageStick(props) {
         <div ref={container} className={styles.container}>
             <div className = {styles.sticky} >
                 <Image
-                src = {props.src}
                 fill 
+                objectFit="cover" 
+                src = {props.src}
                 alt = {props.alt}
                 />
-                {props.boxes.map(({content, width, height, left, transform}, index) => {
+                {props.boxes.map(({content, width, left, transform}, index) => {
                     return <StickyTextBox
                     trans ={transform}
                     left = {left}
-                    height = {height}
+                    //height = {height}
                     width = {width}
-                    back = 'white'
-                    border = 'black'
-                    text = {content}
-                    />
+                    >
+                        {content}
+                    </StickyTextBox>
                 })}
             </div>
         </div>
