@@ -24,7 +24,7 @@ export default function ImageStick(props) {
     // const textTranslate = useTransform(scrollYProgress, [0.4, 0.5, 0.9, .91], ['100vh', '20vh', '20vh', '-30vh'])
 
     props.boxes.forEach(box => {
-        box.transform = useTransform(scrollYProgress, [0, box.enter, box.stick, box.exit], ['100vh', box.top, box.top, '-60vh'])
+        box.transform = useTransform(scrollYProgress, [0, box.enter, box.stick, box.exit], ['100vh', box.top, box.top, box.top])
     })
    
 
