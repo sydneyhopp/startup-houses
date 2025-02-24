@@ -9,4 +9,11 @@
         height: 100vh;
     }
 
+    .textContainer {
+        display: flex;
+        flex-direction: column;
+        max-width: 40vw;
+        z-index: 5;
+    }
+
 }

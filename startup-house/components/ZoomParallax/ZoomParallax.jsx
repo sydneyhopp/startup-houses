@@ -3,11 +3,11 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import blockPic from '/public/illustrations/frontdoor.png';
-import pic1 from '/public/houses/one.jpg';
-import pic2 from '/public/houses/two.jpg';
-import pic3 from '/public/houses/three.jpg';
-import pic4 from '/public/houses/four.jpg';
-import pic5 from '/public/houses/five.jpg';
+import pic1 from '/public/houses/rando1.png';
+import pic2 from '/public/houses/rando2.png';
+import pic3 from '/public/houses/rando3.png';
+import pic4 from '/public/houses/rando4.png';
+import pic5 from '/public/houses/rando5.png';
 import StickyTextBox from '../TextBox/TextBox';
 
 export default function Index() {

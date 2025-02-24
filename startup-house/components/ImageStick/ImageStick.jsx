@@ -3,6 +3,7 @@ import styles from './ImageStick.module.scss'
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import StickyTextBox from '../TextBox/TextBox';
+import FadeIn from '../FadeIn/FadeIn';
 
 // props include:
 // image src
@@ -37,6 +38,8 @@ export default function ImageStick(props) {
                 src = {props.src}
                 alt = {props.alt}
                 />
+
+                {/* <div className = {styles.textContainer}> */}
                 {props.boxes.map(({content, width, left, transform}, index) => {
                     return <StickyTextBox
                     trans ={transform}
@@ -47,6 +50,10 @@ export default function ImageStick(props) {
                         {content}
                     </StickyTextBox>
                 })}
+                {/* </div> */}
+  
+
+                
             </div>
         </div>
     )
