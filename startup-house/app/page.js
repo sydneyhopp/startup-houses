@@ -28,7 +28,7 @@ export default function Scrolly(){
     {left: '10vw', top: '20vh', width: '50vw', 
       content: 
       (<><h1>Code, Coffee, and Chaos</h1>
-        <h3>A project by Maya, Sofia, and Sydney :)</h3></>), 
+        <h3>By Sofia Flores, Maya Schwartz, and Sydney Hoppenworth</h3></>), 
       enter: '0', stick: '1', exit:'1.5'
     },
 
