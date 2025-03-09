@@ -8,54 +8,116 @@ body {
   background-color: #FFFDD0;
 }
 
-.banner {
-  height: 400vh;
-  width: 100vw;
-  height: 100vh;
+h1 {
+  font-size: 6vw;
 }
 
-.floorContainer {
+h2 {
+  font-size: 5vw;
+}
+
+h3 {
+  font-size: 4vw;
+}
+
+p1 {
+  font-size: 2.3vmin;
+}
+
+p {
+  font-size: 2.6vmin;
+}
+
+#openSlide {
+  position: absolute;
+  bottom: 14vh;
+  color: white;
+}
+
+.scrolled {
+  opacity: 0;
+  transform: translateY(10vh);
+  animation: scroll-in 3s forwards;
+  animation-delay: 2s;
+}
+
+@keyframes scroll-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10vh);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.landing {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-}
-
-.floorText {
-  display: flex;
-  padding: 5rem;
-  background-color: white;
-}
-
-.textSection {
-  display: flex;
-  background-color: white;
-  width: auto;
-}
-
-.bannerPic {
+  align-items: center;     /* horizontally center */
+  text-align: center;
   position: sticky;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
+  overflow: hidden;
 }
 
-.textContainer {
-  position:absolute;
-  margin-top: 10vh;
-  margin-left: 5vh;
-  margin-right: 40vh; 
-  z-index: 2;
+
+.landingText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
 }
 
-.bannerText {
-  padding: 5vh;
-  background-color: white;
-  border-radius: 1rem;
+
+.landingBlurb {
+  background-color: #ffffff90;
+  padding: 1rem;
 }
 
-h1 {
-  font-size: 50px;
+@media (min-width: 700px) {
+  .landing {
+    padding: 5vh;
+  }
+
+  .landingBlurb {
+    width: 60vw;
+  }
+
+  .parallaxTextContainer {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    position: absolute;
+    width: 40vw;
+    margin: 10%;
+    right: 0%;
+    padding: 1rem;
+    background-color: #FFFDD0;
+  }
 }
 
+@media (max-width: 699px) {
+  .landing {
+    padding: 10vh;
+  }
+
+  .landingBlurb {
+    width: 80vw;
+  }
+
+  .parallaxTextContainer {
+    width: 80%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    position: absolute;
+    margin: 10%;
+    padding: 1rem;
+    background-color: #FFFDD0;
+  }
+  
+}
