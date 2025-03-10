@@ -103,6 +103,22 @@ body {
   padding:1rem;
 }
 
+.thanks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2rem;
+  background:#2d373f;
+  color: #b8ddf8;
+  height: auto;
+  padding: 1rem;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+
+
 
 @media (min-width: 700px) {
   h1 {

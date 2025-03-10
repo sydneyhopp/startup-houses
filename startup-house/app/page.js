@@ -210,6 +210,17 @@ export default function Scrolly(){
           <br /><p>Could this expansion extend to startup houses? Grant hopes so. “Eventually I see this as a way to fund other hacker houses around the globe.”</p>
         </div>
 
+        <div className="thanks">
+          <p1>
+            BAIP 2025
+          </p1>
+
+          <p1>Thank you to Hilary for your instruction and guidance, and thank you to Chris for welcoming us into your home!</p1>
+
+          <p1>Built by Sydney Hoppenworth, Design and Reporting by Sofia Flores and Maya Schwartz</p1>
+
+        </div>
+
         </main>
     )
 }
