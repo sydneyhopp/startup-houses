@@ -108,7 +108,7 @@ export default function Scrolly(){
           <div className="rightContainer">
           <div className="rightText">
             <p>
-              According to a study in 2020 by Junior Achievement USA, 66 percent of teens between the ages of 13 and 17 said they were "likely" to consider starting a business or becoming an entrepreneur. But 51 percent said they would need more information on what it would take to be successful, and 38 percent said they would need friends with similar interests. 
+              According to a <a href="https://jausa.ja.org/news/press-releases/survey-the-new-normal-hasn-t-dampened-teens-interest-in-becoming-entrepreneurs">study</a> in 2020 by Junior Achievement USA, 66 percent of teens between the ages of 13 and 17 said they were "likely" to consider starting a business or becoming an entrepreneur. But 51 percent said they would need more information on what it would take to be successful, and 38 percent said they would need friends with similar interests. 
             </p>
           </div>
           </div>
@@ -206,7 +206,7 @@ export default function Scrolly(){
         </AnimateOnScroll>
 
         <div className="finalBlurb">
-          <p>Although the pandemic stalled the growth of the tech industry — and the Bay Area’s economy overall — the newer AI startup scene shows promise for development. AI startups have leased an additional 3.9 million square feet of downtown San Francisco office space since 2019, according to a 2024 study by CRE Daily.</p>
+          <p>Although the pandemic stalled the growth of the tech industry — and the Bay Area’s economy overall — the newer AI startup scene shows promise for development. AI startups have leased an additional 3.9 million square feet of downtown San Francisco office space since 2019, according to a 2024 <a href="https://www.credaily.com/briefs/can-san-franciscos-office-market-rebound-in-2025/">study</a> by CRE Daily.</p>
           <br /><p>Could this expansion extend to startup houses? Grant hopes so. “Eventually I see this as a way to fund other hacker houses around the globe.”</p>
         </div>
 

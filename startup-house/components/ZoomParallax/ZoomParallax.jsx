@@ -60,8 +60,8 @@ export default function Index() {
                     <motion.div className="parallaxTextContainer"
                         style={{translateY: firstTranslate}}>
 
-                        <p>The San Francisco Bay Area attracts 36% of all venture capital investments in the U.S. and is home to over 15,000 startup tech companies.</p> <br />
-                        <p>Startup homes play a key role in this ecosystem. They have been the birthplaces of successful companies like Crossmint and KreaAI, which were started in the HF0 residence, and DataSift and Kaggle, of Founders Den. But they are more than a hub of innovation — they are home to community — a stark difference from the Silicon Valley startup culture.</p>
+                        <p>The San Francisco Bay Area attracts <a href="https://www.startupblink.com/startup-ecosystem/san-francisco-ca-us?page=1">36% of all venture capital investments</a> in the U.S. and is home to over 15,000 startup tech companies.</p> <br />
+                        <p>Startup homes play a key role in this ecosystem. They have been the birthplaces of successful companies like Crossmint and KreaAI, which were started in the <a href="https://www.hf0.com/facts">HF0 residence</a>, and DataSift and Kaggle, of <a href="https://www.linkedin.com/company/founders-den/">Founders Den</a>. But they are more than a hub of innovation — they are home to community — a stark difference from the Silicon Valley startup culture.</p>
                     </motion.div>
             </div>
         </div>

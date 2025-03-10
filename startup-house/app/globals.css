@@ -116,6 +116,14 @@ body {
   text-align: center;
   padding-bottom: 2rem;
 }
+ 
+a {
+  text-decoration: underline;
+}
+
+a:hover {
+  color: rgb(131, 109, 84)
+}
 
 
 
@@ -267,13 +275,13 @@ body {
   }
 
   .rightText {
-    width: 90vw;
+    width: 100vw;
     padding: 10vw;
     text-align: left;
   }
   
   .leftText {
-    width: 90vw;
+    width: 100vw;
     padding: 10vw;
     text-align: left;
   }
