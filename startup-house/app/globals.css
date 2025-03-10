@@ -78,9 +78,7 @@ body {
   margin-bottom:10rem;
 }
 
-.pictureBreak {
-  height: 70vh;
-}
+
 
 .testImg {
   position: relative;
@@ -151,6 +149,10 @@ body {
     flex-direction: row; 
   }
 
+  .pictureBreak {
+    height: 70vh;
+  }
+
   .textBetween {
     margin-left: 35vw;
     margin-right: 35vw;
@@ -211,6 +213,10 @@ body {
     width: 80vw;
   }
 
+  .pictureBreak {
+    height: 100vh;
+  }
+
   .parallaxTextContainer {
     width: 80%;
     display: flex;
@@ -241,9 +247,7 @@ body {
   }
 
   .rightContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    
   }
 
   .rightText {

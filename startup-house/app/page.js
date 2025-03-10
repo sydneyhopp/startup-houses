@@ -24,8 +24,8 @@ export default function Scrolly(){
 
     const livingRoomText = [
       { text: '"We have quiet hours where we keep this a silent space, but other than that it’s collaborative."', start: 0.0, end: 0.1, leave: 0.4},
-      { text: '"At 10 a.m. sharp, residents gather for a 10-minute check-in — known as standup — on project progress. If members don’t accomplish what they set out to do, they have to toss a few dollars into the “shame fund” to finance household necessities like a new vacuum."', start: 0.3, end: 0.5, leave: 0.7},
-      { text: '"We play games to unwind. We’ve recently gotten really into chess!"', start: 0.6, end: 0.8, leave: 1.0},
+      { text: '"At 10 a.m. sharp, residents gather for a 10-minute check-in — known as standup — on project progress. If members don’t accomplish what they set out to do, they have to toss a few dollars into the “shame fund” to finance household necessities like a new vacuum."', start: 0.2, end: 0.3, leave: 0.5},
+      { text: '"We play games to unwind. We’ve recently gotten really into chess!"', start: 0.4, end: 0.5, leave: 0.7},
     ];
 
     const kitchenText = [
@@ -35,8 +35,8 @@ export default function Scrolly(){
 
     const bedText = [
       { text: '“I was working 110 hour weeks in Arcadia (Berkley Residency), so I didn’t talk to anyone, I was kind of just locked in my room all day. Now I’m working 80 hour weeks, so that’s better, and I can actually talk to people. I’m almost always working in my room or a coffee shop."', start: 0.0, end: 0.1, leave: 0.4},
-      { text: '"Oh, yeah, there’s someone living in there.” Another startup founder is living in the small room attached to his own.', start: 0.3, end: 0.5, leave: 0.7},
-      { text: '"These were here when I moved in.” Arraya thought they matched the futuristic styled interior design, highlighted with geometric shapes and bright colors.', start: 0.6, end: 0.8, leave: 1.0},
+      { text: '"Oh, yeah, there’s someone living in there.” Another startup founder is living in the small room attached to his own.', start: 0.2, end: 0.3, leave: 0.5},
+      { text: '"These were here when I moved in.” Arraya thought they matched the futuristic styled interior design, highlighted with geometric shapes and bright colors.', start: 0.4, end: 0.5, leave: 0.7},
     ];
 
     return (
@@ -129,22 +129,26 @@ export default function Scrolly(){
             </AnimateOnScroll>
           </section>
 
+        {/* <AnimateOnScroll reappear> */}
         <PairStick imageSrc={livingRoom}
         imageAlt="living room illustration"
         blocks={livingRoomText}>
           <p>“I know people that are all over the spectrum. Some that do have companies, some that don’t, some that have revenue, some that don’t,” said Christopher Arraya.</p>
           <br />
           <p>Arraya joined SF Parc in 2024 without an idea for a startup, after taking a leave of absence from University of North Carolina. Since then, he has become involved in the AI real estate space and is now creating an end-to-end maintenance request system for residential buildings.</p>
-
         </PairStick>
-
+        {/* </AnimateOnScroll> */}
+        
+        <AnimateOnScroll reappear>
         <PairStick imageSrc={kitchen}
         imageAlt="kitchen illustration"
         blocks={kitchenText}>
           <p>The SF Parc startup house helped Arraya and others along the way, offering networking opportunities and spaces for collaboration. “We host fireside chats and dinners where we invite tech luminaries to offer their insights. We try to prevent burnout by making everything flexible” said Grant.  
           </p>
         </PairStick>
+        </AnimateOnScroll>
 
+        <AnimateOnScroll reappear>
         <div className="rightContainer">
           <div className="rightText">
           <p>Even the most intimate spaces — kitchens, living rooms, bedrooms — hum with the sounds of laptop keyboards and business conversations. “When you live and work with a lot of doers, you get more stuff done,” said Grant.
@@ -153,8 +157,9 @@ export default function Scrolly(){
           </p>
           </div>
         </div>
+        </AnimateOnScroll>
 
-
+        <AnimateOnScroll reappear>
         <PairStick imageSrc={bedroom}
         imageAlt="bedroom illustration"
         blocks={bedText}>
@@ -167,7 +172,9 @@ export default function Scrolly(){
           Daniels shares sentiments with Nick Linck, founder of The Residency and its San Francisco location, SF Parc. “I have a ton of ideas I want to exist in the world,” Linck said. 
           </p><br />
         </PairStick>
+        </AnimateOnScroll>
 
+        <AnimateOnScroll reappear>
         <div className="rightContainer">
         <div className="rightText">
         <p>Linck used to work on five startups at once, but found it unsustainable. The Residency was one of his ideas that enabled people to realize more ideas in a social environment. 
@@ -177,14 +184,18 @@ export default function Scrolly(){
 
         </div>
         </div>
+        </AnimateOnScroll>
 
+        <AnimateOnScroll reappear>
         <div className="leftText">
         <p>SF Parc has a waitlist of over 300 people, so it’s likely to be around for a while. Grant and Linck aim to expand the model while maintaining a sense of community. 
         </p><br />
         <p>“There’s no ideal persona for a startup house, just someone who is curious. We need to focus on community, continue to value authenticity, and encourage people to be themselves,” Grant said.
         </p>
         </div>
+        </AnimateOnScroll>
 
+        <AnimateOnScroll reappear>
         <div className="finalImage">
           <Image
           src={skyline}
@@ -192,14 +203,12 @@ export default function Scrolly(){
           fill
           style={{ objectFit: 'cover' }}/>
         </div>
+        </AnimateOnScroll>
 
         <div className="finalBlurb">
           <p>Although the pandemic stalled the growth of the tech industry — and the Bay Area’s economy overall — the newer AI startup scene shows promise for development. AI startups have leased an additional 3.9 million square feet of downtown San Francisco office space since 2019, according to a 2024 study by CRE Daily.</p>
           <br /><p>Could this expansion extend to startup houses? Grant hopes so. “Eventually I see this as a way to fund other hacker houses around the globe.”</p>
         </div>
-
-
-          
 
         </main>
     )
