@@ -25,28 +25,30 @@
 }
 
 .bottomBar {
-    position: sticky;
-    bottom: 0;
-    height: 25vh;
+    position: relative;
+    top: 0;
+    height: auto;
     background: #b8ddf8;
     z-index: 5;
     padding: 1rem;
+
 }
 
 .image {
     position: sticky;
-    height: 75vh;
+    height: 70vh;
     overflow: hidden;
 }
 
 .block {
     background-color: #ffffff90;
     padding: 1rem;
+    margin: 10vh 0;
 }
 
 @media (max-width: 699px) {
     .block {
-        margin: 215vh 0;
+        width:0vh 0;
         text-align: center;
         opacity: 1;
     }
@@ -65,11 +67,9 @@
         margin-left:5vw;
         margin-right:5vh;
     }
-    .block {
-        margin: 55vh 0;
-    }
+
     .image {
-        top: 5vh;
+        top: 15vh;
     }
     .bottomBar{
         padding-left:5vw;

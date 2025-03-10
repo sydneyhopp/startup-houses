@@ -47,17 +47,20 @@ export default function SideBySideUseScroll({ imageSrc, imageAlt, blocks = [], c
           const { text, start, end, leave } = block;
 
           // Fade in from 0 -> 1 across [start..end]
-          const opacity = useTransform(scrollYProgress, [start, end, leave-0.15], [0, 1, 0]);
+          const opacity = useTransform(scrollYProgress, [start, end, leave-0.15], [1, 1, 1]);
 
           // Slide in from 40px down to 0px up
-          const y = useTransform(scrollYProgress, [start, end, end+0.1, leave], ['100vh', '50vh','50vh', '0vh']);
+          const y = useTransform(scrollYProgress, [start,end, end+0.1, leave], ['80vh', '50vh','50vh','-20vh']);
+          const first = useTransform(scrollYProgress, [start, end, end+0.1, leave], ['70vh','70vh', '70vh','-20vh']);
+        //   const last = useTransform(scrollYProgress, [start, end, leave], ['70vh','70vh', '70vh']);
 
           return (
             <motion.div
               key={i}
               style={{
-                opacity,
-                y
+                opacity: i === 0 ? 1 : opacity,
+                y: i === 0 ? first : y,
+                // y: i === blocks.length - 1 ? last : y
               }}
               className={styles.block}
             >
@@ -66,11 +69,12 @@ export default function SideBySideUseScroll({ imageSrc, imageAlt, blocks = [], c
           );
         })}
       </div>
-    </div>
-        <div
+      <div
         className={styles.bottomBar}>
             {children}
         </div>
+    </div>
+        
     </div>
   );
 }
