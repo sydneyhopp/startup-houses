@@ -37,7 +37,7 @@ const useElementOnScreen = (options) => {
 };
 
 
-const AnimateOnScroll = ({ children, reappear, threshold = 0.1 }) => {
+const AnimateOnScroll = ({ children, reappear, threshold = 0.2 }) => {
   const [containerRef, isVisible] = useElementOnScreen({
     threshold: threshold,
     reappear: reappear,
@@ -45,7 +45,7 @@ const AnimateOnScroll = ({ children, reappear, threshold = 0.1 }) => {
 
   return (
     <>
-      <div ref={containerRef} className={`transition duration-1000 ${isVisible ? "opacity-100 blur-none translate-y-0" : "opacity-0 blur-2px -translate-y-0"}  motion-reduce:transition-none motion-reduce:hover:transform-none`}>
+      <div ref={containerRef} className={`transition duration-500 ${isVisible ? "opacity-100 blur-none translate-y-0" : "opacity-0 blur-2px -translate-y-0"}  motion-reduce:transition-none motion-reduce:hover:transform-none`}>
         {children}
       </div>
     </>

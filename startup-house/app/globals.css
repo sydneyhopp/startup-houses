@@ -5,32 +5,12 @@
 
 
 body {
-  background-color: #FFFDD0;
-}
-
-h1 {
-  font-size: 6vw;
-}
-
-h2 {
-  font-size: 5vw;
-}
-
-h3 {
-  font-size: 4vw;
-}
-
-p1 {
-  font-size: 2.3vmin;
-}
-
-p {
-  font-size: 2.6vmin;
+  background-color: #b8ddf8;
 }
 
 #openSlide {
   position: absolute;
-  bottom: 14vh;
+  bottom: 12vh;
   color: white;
 }
 
@@ -78,7 +58,63 @@ p {
   padding: 1rem;
 }
 
+.pagePair {
+  display:flex;
+  gap: 1rem; 
+  margin: 5vw;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5vw;
+  gap: 2rem;
+}
+
+.textBetween {
+  text-align: center;
+  margin-top: 10rem;
+  margin-bottom:10rem;
+}
+
+.pictureBreak {
+  height: 100vh;
+}
+
+.testImg {
+  position: relative;
+}
+
+
+
+.testText {
+  background-color: #ffffff90;
+  padding:1rem;
+}
+
+
 @media (min-width: 700px) {
+  h1 {
+    font-size: 6vw;
+  }
+  
+  h2 {
+    font-size: 5vw;
+  }
+  
+  p1 {
+    font-size: 2vmin;
+  }
+  
+  p {
+    font-size: 2.5vmin;
+  }
+
+  #openSlide {
+    bottom: 11vh;
+  }
+
   .landing {
     padding: 5vh;
   }
@@ -93,14 +129,49 @@ p {
     flex-direction: column;
     position: absolute;
     width: 40vw;
-    margin: 10%;
+    margin: 5vw;
     right: 0%;
     padding: 1rem;
-    background-color: #FFFDD0;
+    background-color: #F8F0C6;
   }
+
+  .pagePair {
+    flex-direction: row; 
+  }
+
+  .textBetween {
+    margin-left: 35vw;
+    margin-right: 35vw;
+  }
+
+  .testImg {
+    width: 70vw;
+    height: 50vh;
+  }
+
+  .testText {
+    width: 30vw;
+  }
+
 }
 
 @media (max-width: 699px) {
+  h1 {
+    font-size: 6vw;
+  }
+  
+  h2 {
+    font-size: 5vw;
+  }
+  
+  p1 {
+    font-size: 3vmin;
+  }
+  
+  p {
+    font-size: 4vmin;
+  }
+
   .landing {
     padding: 10vh;
   }
@@ -117,7 +188,21 @@ p {
     position: absolute;
     margin: 10%;
     padding: 1rem;
-    background-color: #FFFDD0;
+    background-color: #F8F0C6;
+  }
+
+  .pagePair {
+    flex-direction: column;
+  }
+
+  .textBetween {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+  
+  .testImg {
+    width: 90vw;
+    height: 50vh;
   }
   
 }

@@ -24,7 +24,7 @@ export default function Scrolly(){
 
     return (
         <main>
-          <div className="landContainer"> 
+          <section className="landContainer"> 
             <div className="landing">
               <div className="landingImage">
                 <Image
@@ -47,18 +47,74 @@ export default function Scrolly(){
                 <div id="openSlide" className="scrolled">
                   <p>What happens within these walls?</p>
                 </div>
-                
-
               </div>
             </div>
-          </div>
+          </section>
           
-          
-
           <AnimateOnScroll reappear>
             <section className="parallaxSection">
               <ZoomParallax/>
             </section>
+          </AnimateOnScroll>
+
+          
+          <section className="textBetween">
+          <AnimateOnScroll reappear>
+            <p>
+              According to a study in 2020 by Junior Achievement USA, 66 percent of teens between the ages of 13 and 17 said they were "likely" to consider starting a business or becoming an entrepreneur. But 51 percent said they would need more information on what it would take to be successful, and 38 percent said they would need friends with similar interests. 
+            </p>
+            </AnimateOnScroll>
+          </section>
+          
+
+          <AnimateOnScroll reappear>
+          <section className="pictureBreak">
+            <div className="pagePair">
+              <div className="testImg">
+                <Image
+                fill
+                src={basement}
+                alt="image of basement"
+                style={{ objectFit: "cover" }}/>
+              </div>
+
+              <div className="testText">
+                <p>“You have the startup ecosystem in Silicon Valley, but it’s sterile and lacks community. The Residency is a home for people looking for community … it’s an open network for creative technologies and people doing all different things,” said 23-year-old Mackay Grant. He is the community architect responsible for creating a welcoming social environment in the house. 
+                </p>
+              </div>
+            </div>
+          </section>
+          </AnimateOnScroll>
+          
+
+          <AnimateOnScroll>
+          <section className="page">
+            <div className="top">
+              <p>i am the text on top yay! here's a paragraph: According to a study in 2020 by Junior Achievement USA, 66 percent of teens between the ages of 13 and 17 said they were "likely" to consider starting a business or becoming an entrepreneur. But 51 percent said they would need more information on what it would take to be successful, and 38 percent said they would need friends with similar interests. 
+              </p>
+            </div>
+
+            <div className="pagePair">
+              <div className="testImg">
+                <Image
+                fill
+                src={basement}
+                alt="image of basement"
+                style={{ objectFit: "cover" }}/>
+              </div>
+
+              <div className="testText">
+                <p>"You have the startup ecosystem in Silicon Valley, but it’s sterile and lacks community. The Residency is a home for people looking for community … it’s an open network for creative technologies and people doing all different things,” said 23-year-old Mackay Grant. He is the community architect responsible for creating a welcoming social environment in the house.
+                </p>
+              </div>
+            </div>
+
+            <div className="bottom">
+              <p>I'm on the bottom yay! heres a paragrpah: Startup homes offer a robust program that pairs each resident with a coach to provide support and foster a welcoming community within each space.
+              </p>
+
+            </div>
+          </section>
           </AnimateOnScroll>
 
         </main>
