@@ -99,8 +99,10 @@ body {
 }
 
 .finalBlurb {
-  margin:5vw;
+  margin-left:5vw;
+  margin-right:5vw;
   padding:1rem;
+  padding-bottom: 15vh;
 }
 
 .thanks {
