@@ -17,3 +17,62 @@
     }
 
 }
+
+.textBlocks {
+    padding: 2rem;
+    position: relative;
+    z-index: 3;
+}
+
+.bottomBar {
+    position: sticky;
+    bottom: 0;
+    height: 25vh;
+    background: #b8ddf8;
+    z-index: 5;
+    padding: 1rem;
+}
+
+.image {
+    position: sticky;
+    height: 75vh;
+    overflow: hidden;
+}
+
+.block {
+    background-color: #ffffff90;
+    padding: 1rem;
+}
+
+@media (max-width: 699px) {
+    .block {
+        margin: 215vh 0;
+        text-align: center;
+        opacity: 1;
+    }
+    .image {
+        top: 0;
+    }
+
+}
+
+@media (min-width: 700px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 60% 1fr;
+        min-height: 400vh;   
+        position: relative;
+        margin-left:5vw;
+        margin-right:5vh;
+    }
+    .block {
+        margin: 55vh 0;
+    }
+    .image {
+        top: 5vh;
+    }
+    .bottomBar{
+        padding-left:5vw;
+        padding-right:5vw;
+    }
+}

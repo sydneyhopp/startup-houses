@@ -2,6 +2,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import styles from './PairStick.module.scss';
 
 /**
  * @param {string} imageSrc - path to pinned image (e.g. import from /public)
@@ -10,7 +11,7 @@ import Image from "next/image";
  *    Each block: { text: string, start: number, end: number }
  *    "start" and "end" are scrollYProgress breakpoints (0..1) 
  */
-export default function SideBySideUseScroll({ imageSrc, imageAlt, blocks = [] }) {
+export default function SideBySideUseScroll({ imageSrc, imageAlt, blocks = [], children }) {
   // We'll measure scroll progress for this container
   const containerRef = useRef(null);
 
@@ -21,23 +22,15 @@ export default function SideBySideUseScroll({ imageSrc, imageAlt, blocks = [] })
   });
 
   return (
+    <div>
+        
     <div
       ref={containerRef}
-      style={{
-        display: "grid",
-        gridTemplateColumns: "40% 1fr",
-        minHeight: "300vh",   // enough vertical space to scroll through multiple blocks
-        position: "relative",
-      }}
+      className={styles.grid}
     >
       {/* LEFT COLUMN: pinned image */}
       <div
-        style={{
-          position: "sticky",
-          top: 0,
-          height: "100vh",
-          overflow: "hidden",
-        }}
+        className={styles.image}
       >
         <Image
           fill
@@ -48,31 +41,36 @@ export default function SideBySideUseScroll({ imageSrc, imageAlt, blocks = [] })
       </div>
 
       {/* RIGHT COLUMN: text blocks using scroll-based transforms */}
-      <div style={{ padding: "2rem", position: "relative" }}>
+      <div className={styles.textBlocks}>
         {blocks.map((block, i) => {
           // Destructure the block's start/end (0..1), plus the text
-          const { start, end, text } = block;
+          const { text, start, end, leave } = block;
 
           // Fade in from 0 -> 1 across [start..end]
-          const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
+          const opacity = useTransform(scrollYProgress, [start, end, leave-0.15], [0, 1, 0]);
 
           // Slide in from 40px down to 0px up
-          const y = useTransform(scrollYProgress, [start, end], [40, 0]);
+          const y = useTransform(scrollYProgress, [start, end, end+0.1, leave], ['100vh', '50vh','50vh', '0vh']);
 
           return (
             <motion.div
               key={i}
               style={{
                 opacity,
-                y,
-                margin: "20vh 0", // pushes blocks further down so they don't appear at top
+                y
               }}
+              className={styles.block}
             >
               <p>{text}</p>
             </motion.div>
           );
         })}
       </div>
+    </div>
+        <div
+        className={styles.bottomBar}>
+            {children}
+        </div>
     </div>
   );
 }

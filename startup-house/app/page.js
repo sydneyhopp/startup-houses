@@ -8,7 +8,7 @@ import AnimateOnScroll from '@/components/AnimateScroll/AnimateScroll'
 import PairStick from '@/components/PairStick';
 import door from '/public/illustrations/frontdoor.png';
 import kitchen from '/public/illustrations/kitchen.png';
-import livingRoom from '/public/final/livingroom.png';
+import livingRoom from '/public/final/livingroom.svg';
 import bedroom from '/public/illustrations/bedroom.png';
 import skyline from '/public/illustrations/skyline.png';
 import transish from '/public/illustrations/tiling.png';
@@ -22,31 +22,16 @@ import ImageStick from '@/components/ImageStick/ImageStick';
 
 export default function Scrolly(){
 
-  let secondText = [
-    {left: '55vw', top: '10vh', width: '40vw', 
-      content: 
-      (<><p>Even the most intimate spaces hum with innovation. That’s the essence of SF Parc—where creativity and startup support are always within reach. “When you live and work with a lot of doers, you get more stuff done,” said Mackay.</p></>), 
-      enter: '.2', stick: '1', exit:'2'},
-    ]
-    const exampleTexts = [
-      "Even the most intimate spaces hum with innovation...",
-      "Another interesting anecdote about the house...",
-      "Here’s a third paragraph so you can see more text...",
-      "Here’s a third paragraph so you can see more text...",
-      "Here’s a third paragraph so you can see more text...",
-      "Here’s a third paragraph so you can see more text...",
-      "Here’s a third paragraph so you can see more text...",
-      "Here’s a third paragraph so you can see more text..."
-      // add as many paragraphs as you want
+    const livingRoomText = [
+      { text: '"We have quiet hours where we keep this a silent space, but other than that it’s collaborative."', start: 0.0, end: 0.3, leave: 0.6},
+      { text: '"At 10 a.m. sharp, residents gather for a 10-minute check-in — known as standup — on project progress. If members don’t accomplish what they set out to do, they have to toss a few dollars into the “shame fund” to finance household necessities like a new vacuum."', start: 0.3, end: 0.6, leave: 0.9},
+      { text: '"We play games to unwind. We’ve recently gotten really into chess!"', start: 0.6, end: 1.0, leave: 1.5},
     ];
 
-    const textSequence = [
-      { text: "First text block. Appears 0% - 20%.", start: 0.0, end: 0.2 },
-      { text: "Second block. 20% - 40%.", start: 0.2, end: 0.4 },
-      { text: "Third block. 40% - 60%.", start: 0.4, end: 0.6 },
-      { text: "Fourth block. 60% - 80%.", start: 0.6, end: 0.8 },
-      { text: "Fifth block. 80% - 100%.", start: 0.8, end: 1.0 },
-    ];
+    const nextText = [
+      { text: "Fourth block. 60% - 80%.", start: 0.6, end: 0.8, leave: 1.0},
+      { text: "Fifth block. 80% - 100%.", start: 0.8, end: 1.0 }
+    ]
 
     return (
         <main>
@@ -129,7 +114,12 @@ export default function Scrolly(){
 
           <PairStick imageSrc={livingRoom}
         imageAlt="living room illustration"
-        blocks={textSequence}/>
+        blocks={livingRoomText}>
+          <p>“I know people that are all over the spectrum. Some that do have companies, some that don’t, some that have revenue, some that don’t,” said Christopher Arraya.</p>
+          <br />
+          <p>Arraya joined SF Parc in 2024 without an idea for a startup, after taking a leave of absence from University of North Carolina. Since then, he has become involved in the AI real estate space and is now creating an end-to-end maintenance request system for residential buildings.</p>
+
+        </PairStick>
 
           
 

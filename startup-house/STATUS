@@ -25,3 +25,5 @@ Cleaning stuff up. Just starting on the Parallax page and adjusting to be respon
 Labored over first to pages. Doing fine. Still haven't gotten to the rest of the scrollytelling. Trying to figure out using Intersection Observer but lowkey failing lol. Added a prettier font though!
 
 Okay. Working on the layout with top/bottom/image+text. Changed the text layout for better readability. Still haven't made scrollable stuff. I might go back to the sticky text box components I made earlier that use the transformY property.
+
+Okay. created my 50th component to attempt at less-hard-coded scrollytelling. Had success. spent a long time just making the page responsive and thinking about what I want on the phone vs. laptop experience. It's 1AM so I'm expecting finishing will bring me well into the night lol.
