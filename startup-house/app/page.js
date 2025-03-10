@@ -1,26 +1,52 @@
 "use client";
 import { motion } from 'framer-motion';
 import React from 'react';
-import {useState, useEffect, useRef} from "react";
+import {useState, useEffect, useRef} from "react";1
 import Image from "next/image";
 import ZoomParallax from '@/components/ZoomParallax/ZoomParallax';
 import AnimateOnScroll from '@/components/AnimateScroll/AnimateScroll'
+import PairStick from '@/components/PairStick';
 import door from '/public/illustrations/frontdoor.png';
 import kitchen from '/public/illustrations/kitchen.png';
-import livingRoom from '/public/illustrations/livingroom.png';
+import livingRoom from '/public/final/livingroom.png';
 import bedroom from '/public/illustrations/bedroom.png';
 import skyline from '/public/illustrations/skyline.png';
 import transish from '/public/illustrations/tiling.png';
 import coworkRoom from '/public/illustrations/workroom.png';
 import block from '/public/final/lineup.svg';
 import basement from '/public/illustrations/basement.png';
-import firstfloor from '/public/illustrations/firstfloor.jpg';
-import secfloor from '/public/illustrations/secfloor.jpg';
 import wholehouse from '/public/illustrations/wholehouse.png';
+import ImageStick from '@/components/ImageStick/ImageStick';
 
 
 
 export default function Scrolly(){
+
+  let secondText = [
+    {left: '55vw', top: '10vh', width: '40vw', 
+      content: 
+      (<><p>Even the most intimate spaces hum with innovation. That’s the essence of SF Parc—where creativity and startup support are always within reach. “When you live and work with a lot of doers, you get more stuff done,” said Mackay.</p></>), 
+      enter: '.2', stick: '1', exit:'2'},
+    ]
+    const exampleTexts = [
+      "Even the most intimate spaces hum with innovation...",
+      "Another interesting anecdote about the house...",
+      "Here’s a third paragraph so you can see more text...",
+      "Here’s a third paragraph so you can see more text...",
+      "Here’s a third paragraph so you can see more text...",
+      "Here’s a third paragraph so you can see more text...",
+      "Here’s a third paragraph so you can see more text...",
+      "Here’s a third paragraph so you can see more text..."
+      // add as many paragraphs as you want
+    ];
+
+    const textSequence = [
+      { text: "First text block. Appears 0% - 20%.", start: 0.0, end: 0.2 },
+      { text: "Second block. 20% - 40%.", start: 0.2, end: 0.4 },
+      { text: "Third block. 40% - 60%.", start: 0.4, end: 0.6 },
+      { text: "Fourth block. 60% - 80%.", start: 0.6, end: 0.8 },
+      { text: "Fifth block. 80% - 100%.", start: 0.8, end: 1.0 },
+    ];
 
     return (
         <main>
@@ -85,37 +111,27 @@ export default function Scrolly(){
             </div>
           </section>
           </AnimateOnScroll>
-          
 
-          <AnimateOnScroll>
-          <section className="page">
-            <div className="top">
-              <p>i am the text on top yay! here's a paragraph: According to a study in 2020 by Junior Achievement USA, 66 percent of teens between the ages of 13 and 17 said they were "likely" to consider starting a business or becoming an entrepreneur. But 51 percent said they would need more information on what it would take to be successful, and 38 percent said they would need friends with similar interests. 
-              </p>
-            </div>
-
-            <div className="pagePair">
-              <div className="testImg">
-                <Image
-                fill
-                src={basement}
-                alt="image of basement"
-                style={{ objectFit: "cover" }}/>
-              </div>
-
-              <div className="testText">
-                <p>"You have the startup ecosystem in Silicon Valley, but it’s sterile and lacks community. The Residency is a home for people looking for community … it’s an open network for creative technologies and people doing all different things,” said 23-year-old Mackay Grant. He is the community architect responsible for creating a welcoming social environment in the house.
-                </p>
-              </div>
-            </div>
-
-            <div className="bottom">
-              <p>I'm on the bottom yay! heres a paragrpah: Startup homes offer a robust program that pairs each resident with a coach to provide support and foster a welcoming community within each space.
-              </p>
-
-            </div>
+          <section className="textBetween">
+          <AnimateOnScroll reappear>
+            <p>
+            Startup homes offer a robust program that pairs each resident with a coach to provide support and foster a welcoming community within each space.            From undergraduate students to established industry professionals looking for a change of pace, startup houses are home to entrepreneurs of many backgrounds. 
+            </p>
+            </AnimateOnScroll>
+            <br />
+            <br />
+            <AnimateOnScroll reappear>
+            <p>
+            Let Chrisopher Arraya, a resident of SF Parc, give a tour of the place!
+            </p>
+            </AnimateOnScroll>
           </section>
-          </AnimateOnScroll>
+
+          <PairStick imageSrc={livingRoom}
+        imageAlt="living room illustration"
+        blocks={textSequence}/>
+
+          
 
         </main>
     )

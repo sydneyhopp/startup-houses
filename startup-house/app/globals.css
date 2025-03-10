@@ -204,5 +204,9 @@ body {
     width: 90vw;
     height: 50vh;
   }
+
+  .testText {
+    text-align: center;
+  }
   
 }
