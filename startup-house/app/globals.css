@@ -93,6 +93,18 @@ body {
   padding:1rem;
 }
 
+.finalImage {
+  position: relative; /* Required for Next.js Image with fill */
+  min-height: 60vh;   /* Ensures the container is at least 40% of viewport height */
+  width: 90vw; 
+  margin: 5vw;
+}
+
+.finalBlurb {
+  margin:5vw;
+  padding:1rem;
+}
+
 
 @media (min-width: 700px) {
   h1 {
@@ -153,6 +165,25 @@ body {
     width: 30vw;
   }
 
+  .rightContainer {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .rightText {
+    width: 50vw;
+    padding: 2rem;
+    margin: 5vw;
+    text-align: right;
+  }
+  
+  .leftText {
+    width: 50vw;
+    padding: 2rem;
+    margin: 5vw;
+    text-align: left;
+  }
+
 }
 
 @media (max-width: 699px) {
@@ -207,6 +238,24 @@ body {
 
   .testText {
     text-align: center;
+  }
+
+  .rightContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rightText {
+    width: 90vw;
+    padding: 10vw;
+    text-align: left;
+  }
+  
+  .leftText {
+    width: 90vw;
+    padding: 10vw;
+    text-align: left;
   }
   
 }
