@@ -36,7 +36,7 @@ export default function Scrolly(){
     const bedText = [
       { text: '“I was working 110 hour weeks in Arcadia (Berkley Residency), so I didn’t talk to anyone, I was kind of just locked in my room all day. Now I’m working 80 hour weeks, so that’s better, and I can actually talk to people. I’m almost always working in my room or a coffee shop."', start: 0.0, end: 0.1, leave: 0.4},
       { text: '"Oh, yeah, there’s someone living in there.” Another startup founder is living in the small room attached to his own.', start: 0.2, end: 0.3, leave: 0.5},
-      { text: '"These were here when I moved in.” Arraya thought they matched the futuristic styled interior design, highlighted with geometric shapes and bright colors.', start: 0.4, end: 0.5, leave: 0.7},
+      { text: '"These were here when I moved in.” Arraya thought the bright neon signs on his wall matched the futuristic styled interior design of the house, highlighted with geometric shapes and bright colors.', start: 0.4, end: 0.5, leave: 0.7},
     ];
 
     return (
@@ -53,7 +53,8 @@ export default function Scrolly(){
               </div>
 
               <div className="landingText">
-                <h1>Code, Coffee, and Chaos</h1>
+                <h1>Coffee, Code, and Co-Living:</h1>
+                <h2>Unpacking SF’s Startup Scene</h2>
                 <p1>By Sofia Flores, Sydney Hoppenworth, and Maya Schwartz</p1>
                 <br />
 

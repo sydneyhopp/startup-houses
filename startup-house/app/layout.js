@@ -19,8 +19,8 @@ const dmSerifText = DM_Serif_Text({
 });
 
 export const metadata = {
-  title: "Code, Coffee, Chaos",
-  description: "BAIP Journalism 390 Project!",
+  title: "Coffee, Code, and Co-Living",
+  description: "Unpacking SF’s Startup Scene",
 };
 
 export default function RootLayout({ children }) {
